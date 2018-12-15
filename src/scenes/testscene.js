@@ -17,8 +17,6 @@ export class TestScene extends Phaser.Scene {
 
         let scoreText = this.add.text(16, 16, 'TEST', { fontSize: '32px', fill: '#ffffff' });
 
-        
-
         //  Creates 1 single bullet, using the 'bullet' graphic
         this.weapon = this.weapons.add(1, "bomb");
 
@@ -48,9 +46,9 @@ export class TestScene extends Phaser.Scene {
 
         ///////////////////////////////////
 
-        const {R} = Phaser.Input.Keyboard.KeyCodes;
+        const {R,F} = Phaser.Input.Keyboard.KeyCodes;
         this.keys = this.input.keyboard.addKeys({
-            r: R
+            r: R, f:F
         });
 
         console.log("created");
@@ -58,9 +56,8 @@ export class TestScene extends Phaser.Scene {
     }
 
     update(time,delta) {
-        this.weapon.fire();
 
-        console.log("fired gun")
+        this.weapon.fire();
 
         if (this.keys.r.isDown) {
             console.log("restarted");
