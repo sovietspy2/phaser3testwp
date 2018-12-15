@@ -46,9 +46,9 @@ export class TestScene extends Phaser.Scene {
 
         ///////////////////////////////////
 
-        const {R,F} = Phaser.Input.Keyboard.KeyCodes;
+        const {R} = Phaser.Input.Keyboard.KeyCodes;
         this.keys = this.input.keyboard.addKeys({
-            r: R, f:F
+            r: R
         });
 
         console.log("created");
