@@ -1,6 +1,6 @@
 import WeaponPlugin from 'phaser3-weapon-plugin';
 
-export class TestScene extends Phaser.Scene {
+export default class TestScene extends Phaser.Scene {
     constructor() {
         super({
             key: "TestScene"
@@ -9,7 +9,6 @@ export class TestScene extends Phaser.Scene {
 
     preload() {
         this.load.image("bomb","./assets/bomb.png");
-        this.load.scenePlugin('WeaponPlugin', WeaponPlugin, null, 'weapons');
         console.log("prelaoded");
     }
 
